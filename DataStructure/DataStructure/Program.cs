@@ -12,8 +12,9 @@ namespace DataStructure
             Node node_2 = new Node(22);
             Node node_3 = new Node(23);
             Node node_4 = new Node(24);
-            Node node_5 = new Node(25);
+            Node node_5 = new Node(15);
 
+            Console.WriteLine("Node are added");
             linkedlist.AddNode(node_1);
             linkedlist.AddNode(node_2);
             linkedlist.AddNode(node_3);
@@ -21,8 +22,15 @@ namespace DataStructure
 
             Console.WriteLine("Add a new Node");
             linkedlist.AppendNode(node_4);
-            linkedlist.AppendNode(node_5);
             linkedlist.Display();
+            Console.WriteLine("New node is added: " + node_4.data);
+
+            Console.WriteLine("Add node at Start Position:");
+            linkedlist.AddNodeAtStart(node_5);
+            linkedlist.Display();
+            Console.WriteLine("At Start Position node is added: " + node_5.data);
+
+
         }
     }
 }

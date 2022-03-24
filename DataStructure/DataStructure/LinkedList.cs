@@ -42,6 +42,19 @@ namespace DataStructure
                 Head = node;
             }
         }
+        public void AddNodeAtStart(Node node)
+        {
+            if(Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                Tail.next = node;
+                Tail = node;
+            }
+        }
         internal void Display()
         {
             Node temp = Head;
@@ -59,7 +72,7 @@ namespace DataStructure
                 Console.Write(temp.data);
                 if (temp.next != null)
                 {
-                    Console.Write("->");
+                    Console.Write("-> ");
                 }
                 temp = temp.next;
             }
