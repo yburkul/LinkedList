@@ -55,6 +55,15 @@ namespace DataStructure
                 Tail = node;
             }
         }
+        public void DeleteNodeAtFirst()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Nothig to delete");
+            }
+            Node temp = this.Head;
+            this.Head = this.Head.next;
+        }
         internal void Display()
         {
             Node temp = Head;
@@ -76,6 +85,7 @@ namespace DataStructure
                 }
                 temp = temp.next;
             }
+
         }
     }
 }
