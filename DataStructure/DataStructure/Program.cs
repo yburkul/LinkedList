@@ -11,8 +11,6 @@ namespace DataStructure
             Node node_1 = new Node(21);
             Node node_2 = new Node(22);
             Node node_3 = new Node(23);
-            Node node_4 = new Node(24);
-            Node node_5 = new Node(15);
 
             Console.WriteLine("Node are added");
             linkedlist.AddNode(node_1);
@@ -21,11 +19,13 @@ namespace DataStructure
             linkedlist.Display();
 
             Console.WriteLine("Add a new Node");
+            Node node_4 = new Node(20);
             linkedlist.AppendNode(node_4);
             linkedlist.Display();
             Console.WriteLine("\n New node is added: " + node_4.data);
 
             Console.WriteLine("Add node at Start Position:");
+            Node node_5 = new Node(24);
             linkedlist.AddNodeAtStart(node_5);
             linkedlist.Display();
             Console.WriteLine("\n At Start Position node is added: " + node_5.data);
@@ -39,6 +39,17 @@ namespace DataStructure
             linkedlist.Display();
             Console.WriteLine("\n Deleted the last node");
 
+            Console.WriteLine("Enter Number want to Search");
+            int data = int.Parse(Console.ReadLine());
+            bool res = linkedlist.search(data);
+            if (res == true)
+            {
+                Console.WriteLine("Data is found");
+            }
+            else
+            {
+                Console.WriteLine("Data is not found");
+            }
 
         }
     }

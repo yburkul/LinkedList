@@ -28,7 +28,6 @@ namespace DataStructure
                 Head = node;
             }
         }
-
         public void AppendNode(Node node)
         {
             if (Head == null && Tail == null)
@@ -64,7 +63,6 @@ namespace DataStructure
             Node temp = this.Head;
             this.Head = this.Head.next;
         }
-
         public void DeleteNodeAtLast()
         {
             if (Head == null)
@@ -104,7 +102,20 @@ namespace DataStructure
                 }
                 temp = temp.next;
             }
+        }
+        public bool search(int data)
+        {
+            Node temp = this.Head;
+            while(temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return true;
+                }
+                temp = temp.next;
 
+            }
+            return false;
         }
     }
 }
