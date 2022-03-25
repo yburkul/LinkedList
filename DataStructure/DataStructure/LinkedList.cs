@@ -31,20 +31,7 @@ namespace DataStructure
 
         public void AppendNode(Node node)
         {
-            if (Head == null && Tail == null )
-            {
-                Head = node;
-                Tail = node;
-            }
-            else
-            {
-                node.next = Head;
-                Head = node;
-            }
-        }
-        public void AddNodeAtStart(Node node)
-        {
-            if(Head == null && Tail == null)
+            if (Head == null && Tail == null)
             {
                 Head = node;
                 Tail = node;
@@ -55,14 +42,46 @@ namespace DataStructure
                 Tail = node;
             }
         }
+        public void AddNodeAtStart(Node node)
+        {
+            if (Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                node.next = Head;
+                Head = node;
+            }
+        }
         public void DeleteNodeAtFirst()
         {
             if (this.Head == null)
             {
-                Console.WriteLine("Nothig to delete");
+                Console.WriteLine("Nothing to delete");
             }
             Node temp = this.Head;
             this.Head = this.Head.next;
+        }
+
+        public void DeleteNodeAtLast()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Nothing to delete");
+            }
+            else
+            {
+                Node temp = Head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Tail = temp;
+                Console.WriteLine("\n Delete the last node: " + temp.next.data);
+                temp.next = null;
+            }
         }
         internal void Display()
         {

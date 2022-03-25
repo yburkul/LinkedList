@@ -35,6 +35,10 @@ namespace DataStructure
             linkedlist.Display();
             Console.WriteLine("\n First node are deleted");
 
+            linkedlist.DeleteNodeAtLast();
+            linkedlist.Display();
+            Console.WriteLine("\n Deleted the last node");
+
 
         }
     }
