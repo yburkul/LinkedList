@@ -50,7 +50,10 @@ namespace DataStructure
             {
                 Console.WriteLine("Data is not found");
             }
-
+            
+            linkedlist.AddSpecificNode(100, 2);
+            linkedlist.Display();
+            Console.WriteLine("\nSepecific Node is Added");
         }
     }
 }
