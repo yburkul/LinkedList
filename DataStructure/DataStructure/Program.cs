@@ -54,6 +54,11 @@ namespace DataStructure
             linkedlist.AddSpecificNode(100, 2);
             linkedlist.Display();
             Console.WriteLine("\nSepecific Node is Added");
+
+            Node head = null;
+            linkedlist.DeleteSpecificNode(head, 1);
+            linkedlist.Display();
+            Console.WriteLine("\nSpecific Node is deleted");
         }
     }
 }
